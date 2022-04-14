@@ -1,0 +1,52 @@
+// colors
+$c-white: #ffffff;
+$c-black: #000000;
+$c-primary: #e9e9e9;
+$c-secondary: rgb(13, 39, 80);
+$c-bright: #ff5c00;
+$c-error: #ff1e00;
+
+$c-primary-dark: #181818;
+$c-secondary-dark: #589bff;
+
+//transition
+$dft-transition: all 0.25s linear;
+
+//sizes
+$height-sm: rem(56px);
+
+//spaces
+$dft-spacing: rem(30px);
+$dft-spacing-sm: rem(16px);
+$h-header: calc(#{rem(57px)} + #{$dft-spacing} / 2);
+
+//breakpoints
+$xs: 320;
+$md: 768;
+$lg: 992;
+$xl: 1200;
+
+$breakpoints: (
+    "phone": $xs + "px",
+    "tablet": $md + "px",
+    "tablet-lg": $lg + "px",
+    "desktop": $xl + "px",
+) !default;
+
+//other
+$dft-borderR: rem(20px);
+$borderR-sm: rem(15px);
+
+//fonts
+$dft-family: "Fira Sans", sans-serif;
+
+//font weight
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+
+//z-index
+$z-deep: -1;
+$z-over: 1;
+$z-up: 5;
+$z-base: 0;

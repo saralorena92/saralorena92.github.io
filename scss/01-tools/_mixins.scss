@@ -1,0 +1,37 @@
+//grid
+
+$grid__cols: 12;
+
+$grid__bp-sm: $xs;
+$grid__bp-md: $md;
+$grid__bp-lg: $lg;
+$grid__bp-xl: $xl;
+
+$map-grid-props: (
+    "": 0,
+    "-sm": $grid__bp-sm,
+    "-md": $grid__bp-md,
+    "-lg": $grid__bp-lg,
+    "-xl": $grid__bp-xl,
+);
+
+@mixin create-mq($breakpoint) {
+    @if ($breakpoint == 0) {
+        @content;
+    } @else {
+        @media screen and (min-width: $breakpoint * 1px) {
+            @content;
+        }
+    }
+}
+
+@mixin create-col-classes($modifier, $grid__cols, $breakpoint) {
+    @include create-mq($breakpoint) {
+        @for $i from 1 through $grid__cols {
+            .col#{$modifier}-#{$i} {
+                flex-basis: (100 / ($grid__cols / $i)) * 1%;
+                max-width: (100 / ($grid__cols / $i)) * 1%;
+            }
+        }
+    }
+}

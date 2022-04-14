@@ -1,0 +1,27 @@
+//grid
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 -$dft-spacing-sm;
+    padding: $dft-spacing-sm 0;
+    position: relative;
+
+    & + .row {
+        margin-top: rem(50px);
+    }
+    @include media(">=tablet") {
+        flex-direction: row;
+    }
+
+    & > .col {
+        flex: 1 1 auto;
+        padding-left: $dft-spacing-sm;
+        padding-right: $dft-spacing-sm;
+    }
+    @each $modifier, $breakpoint in $map-grid-props {
+        @include create-col-classes($modifier, $grid__cols, $breakpoint);
+    }
+}
