@@ -26,8 +26,7 @@
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;700&display=swap" rel="stylesheet">
     <!--//google fonts-->
     <!--material icons-->
     <link rel="stylesheet" href="node_modules/@mdi/font/css/materialdesignicons.css">
@@ -37,23 +36,42 @@
     <!--//aos-->
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-    <header>
-        lorem
+    <header class="o-header" id="header">
+        <nav class="o-header__nav">
+            <button class="o-header__nav-btn" id="togglemenu">
+                <i class="mdi mdi-menu open"></i>
+                <i class="mdi mdi-close close"></i>
+            </button>
+            <ul class="o-header__nav-menu hidemenu" id="menu" data-target="togglemenu">
+                <li><a href="">Mis proyectos</a></li>
+                <li><a href="">Experiencia</a></li>
+                <li><a href="">Conocimientos</a></li>
+                <li><a href="">Contacta</a></li>
+            </ul>
+        </nav>
+        <div class="o-header__brand">
+            <p>Sara Lorena</p>
+        </div>
+        <div class="o-header__contact">
+            <a href=""><i class="mdi mdi-instagram"></i></a>
+            <a href=""><i class="mdi mdi-linkedin"></i></a>
+        </div>
     </header>
     <main>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptatem, iusto nihil quod sapiente hic at
         eligendi fuga temporibus dicta officia quas, repellat facilis maxime magnam inventore tempore enim excepturi?
     </main>
-    <footer>
-        <p>Design and markup by Sara L</p>
-    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <script src="js/main.js"></script>
+
+
 </body>
 
 </html>

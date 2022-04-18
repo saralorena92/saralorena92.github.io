@@ -1,1 +1,86 @@
 //header
+.o-header {
+    height: rem(74px);
+    width: 100vw;
+    background-color: $c-white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: $dft-spacing $dft-spacing-sm;
+    color: $c-dark;
+
+    @include media(">=tablet") {
+        width: rem(74px);
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    &__nav-btn,
+    &__brand,
+    &__contact {
+        z-index: $z-up;
+    }
+    &__nav-btn {
+        position: relative;
+        .open {
+            display: block;
+        }
+        .close {
+            display: none;
+        }
+        &.show {
+            .open {
+                display: none;
+            }
+            .close {
+                display: block;
+            }
+        }
+    }
+    &__brand {
+        white-space: nowrap;
+        text-align: center;
+        font-weight: $fw-bold;
+        font-size: $fs-sm;
+
+        @include media(">=tablet") {
+            transform: rotate(-90deg);
+            transform-origin: center;
+        }
+    }
+    &__nav-menu {
+        background-color: $c-white;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transition: $dft-transition;
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: row;
+        font-size: rem(20px);
+        * {
+            color: $c-dark;
+        }
+        @include media(">=tablet") {
+            flex-direction: column;
+            font-size: rem(24px);
+        }
+    }
+}
+
+.hidemenu {
+    transform: translateX(-100%);
+}
+.showmenu {
+    transform: translate(0);
+    -webkit-animation-name: bounceInLeft;
+    animation-name: bounceInLeft;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+}
