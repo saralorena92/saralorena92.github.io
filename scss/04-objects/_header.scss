@@ -19,6 +19,10 @@
     flex-direction: row;
     padding: $dft-spacing $dft-spacing-sm;
     color: $c-dark;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
 
     @include media(">=tablet") {
         width: rem(74px);

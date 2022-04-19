@@ -4,9 +4,13 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    padding-top: rem(74px);
     @include media(">=tablet") {
-        flex-direction: row;
+        padding-top: 0;
+        padding-left: rem(74px);
     }
 }
