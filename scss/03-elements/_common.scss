@@ -8,9 +8,9 @@ body {
 }
 
 main {
-    padding-top: rem(74px);
+    padding-top: $dft-header-h;
     @include media(">=tablet") {
         padding-top: 0;
-        padding-left: rem(74px);
+        padding-left: $dft-header-h;
     }
 }

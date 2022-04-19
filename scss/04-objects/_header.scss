@@ -10,7 +10,7 @@
 }
 
 .o-header {
-    height: rem(74px);
+    height: $dft-header-h;
     width: 100vw;
     background-color: $c-white;
     display: flex;
@@ -25,7 +25,7 @@
     left: 0;
 
     @include media(">=tablet") {
-        width: rem(74px);
+        width: $dft-header-h;
         height: 100vh;
         flex-direction: column;
     }
