@@ -37,6 +37,22 @@
         color: $c-dark;
         @extend %null-appearance;
 
+        .o-header__brand-logo {
+            @include media("<tablet") {
+                &.close,
+                &.open {
+                    display: none;
+                }
+            }
+            @include media(">=tablet") {
+                display: block;
+                position: fixed;
+                right: $dft-spacing-sm;
+                top: $dft-spacing-sm;
+                height: rem(30px);
+            }
+        }
+
         &:hover {
             color: $c-primary;
         }
@@ -54,6 +70,14 @@
             .close {
                 display: block;
             }
+            .o-header__brand-logo {
+                @include media("<tablet") {
+                    &.close,
+                    &.open {
+                        display: none;
+                    }
+                }
+            }
         }
     }
     &__brand {
@@ -61,6 +85,17 @@
         text-align: center;
         font-weight: $fw-bold;
         font-size: $fs-sm;
+        display: flex;
+        align-items: center;
+
+        &-logo {
+            height: rem(15px);
+            display: inline-block;
+            padding-right: $dft-spacing-sm;
+            @include media(">=tablet") {
+                display: none;
+            }
+        }
 
         @include media(">=tablet") {
             transform: rotate(-90deg);

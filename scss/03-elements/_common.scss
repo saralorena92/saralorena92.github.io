@@ -2,3 +2,11 @@
     transition: $dft-transition;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    @include media(">=tablet") {
+        flex-direction: row;
+    }
+}
