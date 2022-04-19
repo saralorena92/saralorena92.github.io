@@ -1,4 +1,14 @@
 //header
+%null-appearance {
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+}
+
 .o-header {
     height: rem(74px);
     width: 100vw;
@@ -23,6 +33,14 @@
     }
     &__nav-btn {
         position: relative;
+        font-size: rem(30px);
+        color: $c-dark;
+        @extend %null-appearance;
+
+        &:hover {
+            color: $c-primary;
+        }
+
         .open {
             display: block;
         }
@@ -58,6 +76,60 @@
         top: 0;
         bottom: 0;
         transition: $dft-transition;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20%;
+
+        li {
+            font-size: rem(24px);
+            display: flex;
+            align-items: center;
+            height: rem(80px);
+            a {
+                color: $c-dark;
+                position: relative;
+                text-decoration: none;
+                font-weight: $fw-light;
+                padding-right: rem(15px);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: rem(5px);
+                    left: 0;
+                    background-color: $c-primary;
+                    width: 0;
+                    height: rem(12px);
+                    z-index: $z-deep;
+                    transition: $dft-transition;
+                }
+            }
+
+            &.active,
+            &:hover {
+                a {
+                    &::before {
+                        width: 100%;
+                        transition: $dft-transition;
+                    }
+                }
+            }
+            &.active {
+                a {
+                    font-weight: $fw-bold;
+                }
+            }
+            @include media(">=desktop") {
+                font-size: rem(50px);
+                height: rem(130px);
+                a {
+                    &::before {
+                        height: rem(24px);
+                    }
+                }
+            }
+        }
     }
 
     &__contact {
@@ -66,7 +138,11 @@
         font-size: rem(20px);
         * {
             color: $c-dark;
+            &:hover {
+                color: $c-primary;
+            }
         }
+
         @include media(">=tablet") {
             flex-direction: column;
             font-size: rem(24px);
@@ -75,12 +151,19 @@
 }
 
 .hidemenu {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
+    @include media(">=tablet") {
+        transform: translateX(-100%);
+    }
 }
 .showmenu {
     transform: translate(0);
-    -webkit-animation-name: bounceInLeft;
-    animation-name: bounceInLeft;
+    -webkit-animation-name: bounceInTop;
+    animation-name: bounceInTop;
     -webkit-animation-duration: 0.75s;
     animation-duration: 0.75s;
+    @include media(">=tablet") {
+        -webkit-animation-name: bounceInLeft;
+        animation-name: bounceInLeft;
+    }
 }

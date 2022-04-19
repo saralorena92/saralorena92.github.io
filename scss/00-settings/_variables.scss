@@ -14,7 +14,6 @@ $dft-spacing: rem(30px);
 $dft-spacing-sm: rem(16px);
 
 //font size
-
 $fs-sm: min(max(14px, 2vw), 20px);
 
 //breakpoints
@@ -26,8 +25,8 @@ $xl: 1200;
 $breakpoints: (
     "phone": $xs + "px",
     "tablet": $md + "px",
-    "tablet-lg": $lg + "px",
-    "desktop": $xl + "px",
+    "desktop": $lg + "px",
+    "widescreen": $xl + "px",
 ) !default;
 
 //other
