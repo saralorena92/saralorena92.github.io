@@ -30,6 +30,23 @@
         flex-direction: column;
     }
 
+    & > * {
+        flex: 1 1 100%;
+        text-align: center;
+        justify-content: center;
+        &:first-child {
+            text-align: left;
+            justify-content: flex-start;
+        }
+        &:last-child {
+            text-align: right;
+            justify-content: flex-end;
+            & > * {
+                width: rem(24px);
+            }
+        }
+    }
+
     &__nav-btn,
     &__brand,
     &__contact {
@@ -114,7 +131,6 @@
         left: 0;
         top: 0;
         bottom: 0;
-        transition: $dft-transition;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -199,8 +215,8 @@
     transform: translate(0);
     -webkit-animation-name: bounceInTop;
     animation-name: bounceInTop;
-    -webkit-animation-duration: 0.75s;
-    animation-duration: 0.75s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
     @include media(">=tablet") {
         -webkit-animation-name: bounceInLeft;
         animation-name: bounceInLeft;
