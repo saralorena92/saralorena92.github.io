@@ -9,7 +9,7 @@
     cursor: pointer;
 }
 
-.o-header {
+.header {
     height: $dft-header-h;
     width: 100vw;
     background-color: $c-white;
@@ -23,6 +23,7 @@
     top: 0;
     bottom: 0;
     left: 0;
+    z-index: $z-up;
 
     @include media(">=tablet") {
         width: $dft-header-h;
@@ -58,7 +59,7 @@
         color: $c-dark;
         @extend %null-appearance;
 
-        .o-header__brand-logo {
+        .header__brand-logo {
             @include media("<tablet") {
                 &.close,
                 &.open {
@@ -91,7 +92,7 @@
             .close {
                 display: block;
             }
-            .o-header__brand-logo {
+            .header__brand-logo {
                 @include media("<tablet") {
                     &.close,
                     &.open {

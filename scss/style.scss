@@ -1,11 +1,16 @@
 //settings
-@import "00-settings/materialdesign";
 @import "00-settings/include-media";
 @import "00-settings/rem";
 @import "00-settings/variables";
+
 //tools
+@import "01-tools/fonts/materialdesign";
 @import "01-tools/mixins";
 @import "01-tools/animations";
+@import "01-tools/slick/slick";
+@import "01-tools/slick/slick-theme";
+@import "01-tools/slick/custom-slick";
+
 //generic
 @import "02-generic/reset";
 @import "02-generic/normalize";

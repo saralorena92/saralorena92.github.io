@@ -37,41 +37,54 @@
 </head>
 
 <body>
-    <header class="o-header" id="header">
-        <nav class="o-header__nav">
-            <button class="o-header__nav-btn" id="togglemenu">
+    <header class="header" id="header">
+        <nav class="header__nav">
+            <button class="header__nav-btn" id="togglemenu">
                 <i class="mdi mdi-menu open"></i>
                 <i class="mdi mdi-close close"></i>
-                <img src="images/logo-w.svg" class="o-header__brand-logo open" alt="personal logo in white">
-                <img src="images/logo.svg" class="o-header__brand-logo close" alt="personal logo in black">
-                <span class="u-sr-only">open / close menu</span>
+                <img src="images/logo-w.svg" class="header__brand-logo open" alt="personal logo in white">
+                <img src="images/logo.svg" class="header__brand-logo close" alt="personal logo in black">
+                <span class="sr-only">open / close menu</span>
             </button>
-            <ul class="o-header__nav-menu hidemenu" id="menu" data-target="togglemenu">
+            <ul class="header__nav-menu hidemenu" id="menu" data-target="togglemenu">
                 <li><a href="">Mis proyectos</a></li>
                 <li><a href="">Experiencia</a></li>
                 <li><a href="">Conocimientos</a></li>
                 <li><a href="">Contacta</a></li>
             </ul>
         </nav>
-        <div class="o-header__brand">
-            <img src="images/logo.svg" class="o-header__brand-logo" alt="personal logo in black">
+        <div class="header__brand">
+            <img src="images/logo.svg" class="header__brand-logo" alt="personal logo in black">
             <p>Sara Lorena</p>
         </div>
-        <div class="o-header__contact">
+        <div class="header__contact">
             <a href="https://www.instagram.com/saralarts/" target="_blank"><i class="mdi mdi-instagram"></i><span
-                    class="u-sr-only">https://www.instagram.com/saralarts/</span></a>
+                    class="sr-only">https://www.instagram.com/saralarts/</span></a>
             <a href="https://www.linkedin.com/in/sara-lorena-rodr%C3%ADguez-sabat%C3%A9-082195a3/?originalSubdomain=es"
                 target="_blank"><i class="mdi mdi-linkedin"></i><span
-                    class="u-sr-only">https://www.linkedin.com/in/sara-lorena-rodr%C3%ADguez-sabat%C3%A9-082195a3/?originalSubdomain=es</span></a>
+                    class="sr-only">https://www.linkedin.com/in/sara-lorena-rodr%C3%ADguez-sabat%C3%A9-082195a3/?originalSubdomain=es</span></a>
         </div>
     </header>
     <main>
-        <img src="images/projects.jpg" alt="">
+        <div class="slider-for">
+            <img src="images/projects.jpg" alt="">
+            <img src="images/projects2.jpg" alt="">
+            <img src="images/projects3.jpg" alt="">
+            <img src="images/projects4.jpg" alt="">
+        </div>
+
+        <div class="slider-nav">
+            <img src="images/projects.jpg" alt="">
+            <img src="images/projects2.jpg" alt="">
+            <img src="images/projects3.jpg" alt="">
+            <img src="images/projects4.jpg" alt="">
+        </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="js/main.js"></script>
 
 
