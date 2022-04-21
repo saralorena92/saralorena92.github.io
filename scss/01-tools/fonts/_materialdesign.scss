@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Material Design Icons";
+    font-family: $icon-family;
     src: url("../fonts/materialdesignicons-webfont.eot?v=6.5.95");
     src: url("../fonts/materialdesignicons-webfont.eot?#iefix&v=6.5.95") format("embedded-opentype"),
         url("../fonts/materialdesignicons-webfont.woff2?v=6.5.95") format("woff2"),
@@ -11,7 +11,7 @@
 .mdi:before,
 .mdi-set {
     display: inline-block;
-    font: normal normal normal 24px/1 "Material Design Icons";
+    font: normal normal normal 24px/1 $icon-family;
     font-size: inherit;
     text-rendering: auto;
     line-height: inherit;

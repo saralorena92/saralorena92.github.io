@@ -1,0 +1,22 @@
+//custom slick
+
+.slick-arrow{
+    z-index: $z-up;
+    &::before{
+        font-family: $icon-family;
+    }
+
+    &.slick-next{
+        right: 0;
+        &::before{
+            content: "\F0054";
+        }
+    }
+
+    &.slick-prev{
+        left: 0;
+        &::before{
+            content: "\F004D";
+        }
+    }
+}
