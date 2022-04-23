@@ -71,8 +71,9 @@
 
     &-info {
         @include media(">=tablet") {
-            padding: rem(90px) $dft-spacing 0 $dft-spacing;
-            height: calc(100% - (#{$dft-indicator-h} + #{$dft-spacing} * 1.5));
+            margin-top: rem(90px);
+            padding: 0 $dft-spacing;
+            height: calc(100% - (#{$dft-indicator-h} + #{$dft-spacing} * 4));
             overflow-y: auto;
         }
     }
