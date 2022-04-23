@@ -70,7 +70,7 @@
                 display: block;
                 position: fixed;
                 right: $dft-spacing-sm;
-                top: $dft-spacing-sm;
+                top: rem(32px);
                 height: rem(30px);
             }
         }

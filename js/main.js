@@ -12,21 +12,21 @@ $(document).ready(function () {
         })
     }
 
-    $('.slider-for').slick({
+    $('.slider__main').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
         dots: false,
         fade: true,
-        asNavFor: '.slider-nav'
+        asNavFor: '.slider__indicator'
     });
-    $('.slider-nav').slick({
-        slidesToShow: 3,
+    $('.slider__indicator').slick({
+        slidesToShow: 4,
         slidesToScroll: 1,
-        asNavFor: '.slider-for',
+        asNavFor: '.slider__main',
         arrows: false,
         dots: false,
-        centerMode: true,
+        centerMode: false,
         focusOnSelect: true
     });
 });
