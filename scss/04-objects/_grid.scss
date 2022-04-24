@@ -12,7 +12,7 @@
     & + .row {
         margin-top: rem(50px);
     }
-    @include media(">=tablet") {
+    @include media(">=desktop") {
         flex-direction: row;
     }
 

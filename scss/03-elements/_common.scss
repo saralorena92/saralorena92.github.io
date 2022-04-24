@@ -11,7 +11,7 @@ body {
 
 main {
     padding-top: $dft-header-h;
-    @include media(">=tablet") {
+    @include media(">=desktop") {
         padding-top: 0;
         padding-left: $dft-header-h;
     }
