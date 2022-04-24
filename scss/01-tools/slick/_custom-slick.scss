@@ -32,7 +32,6 @@
         }
 
         @include media(">=tablet") {
-
             &.slick-prev {
                 left: 10vw;
             }
@@ -92,12 +91,13 @@
         .slick-track {
             height: $dft-indicator-h;
             overflow: hidden;
+            display: flex;
         }
     }
 
     &-pic {
         position: relative;
-        width: $dft-indicator-h !important;
+        width: 50% !important;
         margin: 0 rem(13px);
         border-radius: $borderR-xs;
         overflow: hidden;
