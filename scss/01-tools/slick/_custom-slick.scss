@@ -73,8 +73,9 @@
 
     &-img{
         margin: 0;
-        height: 30vw;
+        height: 50vw;
         width: 100%;
+        overflow: hidden;
         @include media(">=desktop") {
             height: 100vh;
         }
