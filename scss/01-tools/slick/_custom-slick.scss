@@ -31,18 +31,21 @@
             font-size: rem(28px);
         }
 
-        &.slick-prev {
-            left: 10vw;
-        }
-        &.slick-next {
-            left: calc(10vw + #{rem(64px)});
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                width: 1px;
-                height: 100%;
-                background-color: $c-white;
+        @include media(">=tablet") {
+
+            &.slick-prev {
+                left: 10vw;
+            }
+            &.slick-next {
+                left: calc(10vw + #{rem(64px)});
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 1px;
+                    height: 100%;
+                    background-color: $c-white;
+                }
             }
         }
     }
