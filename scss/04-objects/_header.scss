@@ -213,16 +213,16 @@
     }
 }
 .showmenu {
-    transform: translate(0);
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-
     @include media("screen", "<tablet") {
         -webkit-animation-name: bounceInTop;
         animation-name: bounceInTop;
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
     }
     @include media("screen", ">=tablet") {
         -webkit-animation-name: bounceInLeft;
         animation-name: bounceInLeft;
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
     }
 }

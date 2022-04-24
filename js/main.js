@@ -17,6 +17,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: true,
         dots: false,
+        infinite: false,
         asNavFor: '.slider__indicator'
     });
     $('.slider__indicator').slick({
