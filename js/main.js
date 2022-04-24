@@ -17,7 +17,6 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: true,
         dots: false,
-        fade: true,
         asNavFor: '.slider__indicator'
     });
     $('.slider__indicator').slick({
@@ -27,6 +26,7 @@ $(document).ready(function () {
         arrows: false,
         dots: false,
         centerMode: false,
-        focusOnSelect: true
+        focusOnSelect: true,
+        infinite: false
     });
 });
