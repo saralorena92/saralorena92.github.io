@@ -35,3 +35,8 @@ $map-grid-props: (
         }
     }
 }
+
+@mixin font-fluid($max-size, $min-size){
+    font-size: calc(#{$min-size}px + (#{$max-size} - #{$min-size}) * ((100vw - 320px) / (1920 - 320)));
+    //calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}

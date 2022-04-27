@@ -1,3 +1,32 @@
 //text
 %title-base {
+    font-family: $dft-family;
+    font-weight: $fw-bold;
+    color: $c-white;
+}
+
+%text-base{
+    font-family: $dft-family;
+    font-weight: $fw-light;
+    color: $c-white;
+}
+
+.title{
+    @extend %title-base;
+
+    &--main{
+        @include font-fluid(80, 32);
+    }
+
+    &--block{
+        @include font-fluid(20, 14);
+    }
+}
+
+.text{
+    @extend %text-base;
+
+    &--block{
+       @include font-fluid(16, 14);
+    }
 }

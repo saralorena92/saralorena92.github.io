@@ -48,6 +48,12 @@
             }
         }
     }
+    &-wrapper{
+        .title{
+            position: absolute;
+            z-index: $z-up;
+        }
+    }
     &-pic {
         height: calc(100vh - #{$dft-header-h});
 
@@ -65,9 +71,6 @@
 
         @include media(">=desktop") {
             height: 100vh;
-            * {
-                height: 100%;
-            }
         }
     }
 
@@ -92,6 +95,8 @@
 }
 
 .slider__indicator {
+    cursor: pointer;
+    
     @include media(">=desktop") {
         transform: translateY(-14vw);
         height: 0;
@@ -105,9 +110,15 @@
     }
 
     .slick-slide{
+        &:hover{
+            .slider__indicator-pic{
+                opacity: 1;
+            }
+         }
         .slider__indicator-pic{
             opacity: 60%;
             border: 2px solid transparent;
+            
         }
     }
     .slick-current {
