@@ -103,7 +103,7 @@
         @include media(">=desktop") {
             margin-top: rem(90px);
             padding: 0 $dft-spacing;
-            height: calc(100% - (#{$dft-indicator-h} + #{$dft-spacing} * 4));
+            height: calc(100% - (#{$dft-indicator-h} + #{$dft-spacing} * 6));
             overflow-y: auto;
             margin-left: auto;
             margin-right: auto;
