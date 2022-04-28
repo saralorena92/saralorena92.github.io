@@ -2,16 +2,20 @@
     box-sizing: border-box;
 }
 
-body {
+body, html {
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 main {
-    padding-top: $dft-header-h;
+    margin-top: $dft-header-h;
+    overflow-y: auto;
+  height: 100vh;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
     @include media(">=desktop") {
-        padding-top: 0;
+        margin-top: 0;
         padding-left: $dft-header-h;
     }
 }
