@@ -52,6 +52,21 @@
         .title{
             position: absolute;
             z-index: $z-up;
+            margin-top:$dft-spacing;
+            @include media(">=desktop") {
+                left: 10vw;
+                margin-top: rem(100px);
+                padding-top: $dft-spacing;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 55vw;
+                    height: 1px;
+                    background-color: $c-white;
+                }
+                }
         }
     }
     &-pic {
@@ -90,6 +105,15 @@
             padding: 0 $dft-spacing;
             height: calc(100% - (#{$dft-indicator-h} + #{$dft-spacing} * 4));
             overflow-y: auto;
+            margin-left: auto;
+            margin-right: auto;
+            width: 65%;
+        }
+        .title{
+            margin-bottom: (32px);
+            @include media(">=desktop") {
+        margin-bottom: rem(42px);
+            }
         }
     }
 }

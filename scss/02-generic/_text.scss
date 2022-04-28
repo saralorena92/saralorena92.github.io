@@ -28,5 +28,6 @@
 
     &--block{
        @include font-fluid(16, 14);
+       @include font-height(32, 28);
     }
 }

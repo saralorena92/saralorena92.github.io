@@ -1,0 +1,11 @@
+//separator
+.separator{
+    width: rem(38px);
+    border: none;
+    background-color: $c-white;
+    height: 1px;
+    margin: $dft-spacing 0;
+    @include media(">=desktop") {
+        margin: $dft-spacing-xl 0;
+    }
+}
