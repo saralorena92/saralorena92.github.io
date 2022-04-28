@@ -1,22 +1,25 @@
 //button
-%btn-base{
-font-family: $dft-family;
-font-weight: $fw-bold;
-border-radius: $borderR-xs;
-text-decoration: none;
-cursor: pointer;
-display: inline-block;
+%btn-base {
+    font-family: $dft-family;
+    font-weight: $fw-bold;
+    border-radius: $borderR-xs;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: rem(46px);
 }
-.btn{
-@extend %btn-base;
-@include font-fluid(18, 16);
-padding:  rem(7px) rem(35px);
+.btn {
+    @extend %btn-base;
+    @include font-fluid(18, 16);
+    padding: rem(7px) rem(35px);
 
-&--primary{
-    background-color: $c-primary;
-    color: $c-black;
-    &:hover{
-        background-color: $c-white;
+    &--primary {
+        background-color: $c-primary;
+        color: $c-black;
+        &:hover {
+            background-color: $c-white;
+        }
     }
-}
 }

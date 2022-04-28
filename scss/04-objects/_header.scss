@@ -23,7 +23,7 @@
     top: 0;
     bottom: 0;
     left: 0;
-    z-index: $z-up;
+    z-index: $z-top;
 
     @include media(">=desktop") {
         width: $dft-header-h;
@@ -51,7 +51,7 @@
     &__nav-btn,
     &__brand,
     &__contact {
-        z-index: $z-up;
+        z-index: $z-top;
     }
     &__nav-btn {
         position: relative;
@@ -191,7 +191,7 @@
     &__contact {
         display: flex;
         flex-direction: row;
-        font-size: rem(20px);
+        font-size: rem(24px);
         * {
             color: $c-dark;
             &:hover {
@@ -201,13 +201,13 @@
 
         @include media(">=desktop") {
             flex-direction: column;
-            font-size: rem(24px);
         }
     }
 }
 
 .hidemenu {
     transform: translateY(-100%);
+    transition: $dft-transition;
     @include media(">=desktop") {
         transform: translateX(-100%);
     }

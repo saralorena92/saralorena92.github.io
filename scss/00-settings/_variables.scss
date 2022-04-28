@@ -15,7 +15,6 @@ $dft-spacing-sm: rem(16px);
 $dft-header-h: rem(74px);
 $dft-indicator-h: rem(200px);
 
-
 //breakpoints
 $xs: 320;
 $md: 768;
@@ -35,7 +34,7 @@ $borderR-sm: rem(15px);
 $borderR-xs: rem(5px);
 
 //fonts
-$dft-family: "Inter", sans-serif;
+$dft-family: "Sora", sans-serif;
 $icon-family: "Material Design Icons";
 
 //font weight
@@ -47,4 +46,5 @@ $fw-bold: 700;
 $z-deep: -1;
 $z-over: 1;
 $z-up: 5;
+$z-top: 10;
 $z-base: 0;
