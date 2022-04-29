@@ -18,6 +18,13 @@
         }
     }
 
+    &__content{
+        @include media(">=desktop") {
+            width: 60vw;
+            padding-right: 0;
+        }
+    }
+
     &__header{
         @include media(">=desktop") {
             padding-top: rem(100px);
