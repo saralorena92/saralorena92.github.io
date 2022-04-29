@@ -1,0 +1,41 @@
+//list
+
+%list-base{
+padding-left: 0;
+list-style-type: none;
+}
+
+.list{
+    @extend %list-base;
+    &--text{
+        @include media(">=desktop") {
+       column-count: 2;
+        }
+        li{
+        position: relative;
+        break-inside: avoid-column;
+        margin-bottom: $dft-spacing;
+        padding-bottom:$dft-spacing;
+       
+           
+            &::after{
+             content: "";
+             @extend .separator;
+             position: absolute;
+             bottom: 0;
+             left: 0;  
+             margin: 0; 
+           }
+
+        @include media(">=desktop") {
+            margin-bottom: rem(50px);
+            padding-bottom: rem(50px);
+            &:nth-of-type(even){
+                &::after{
+                    display: none;
+                }
+            }
+        }
+        }
+    }
+}

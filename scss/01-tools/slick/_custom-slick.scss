@@ -66,22 +66,10 @@
         
         .title{
             margin-left: $dft-spacing;
-            position: relative;
             
             @include media(">=desktop") {
                 margin-left: 10vw;
-                padding-top: $dft-spacing;
-
-                &::after{
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 50vw;
-                    height: 1px;
-                    background-color: $c-white;
-                }
-                }
+            }
         }
     }
     &-pic {

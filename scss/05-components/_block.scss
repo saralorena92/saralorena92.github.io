@@ -3,4 +3,13 @@
 .section-block{
     scroll-snap-align: start;
     position: relative;
+
+    &__content, &__header{
+        padding: 0 $dft-spacing;
+
+        @include media(">=desktop") {
+            padding: 0 10vw;
+            margin-top: rem(100px);
+        }
+    }
 }

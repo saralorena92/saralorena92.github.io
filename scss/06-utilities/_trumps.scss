@@ -3,6 +3,10 @@
     color: $c-error !important;
 }
 
+.text-uppercase{
+    text-transform: uppercase;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -13,3 +17,5 @@
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
+

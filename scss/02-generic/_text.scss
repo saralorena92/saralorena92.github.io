@@ -16,6 +16,20 @@
 
     &--main{
         @include font-fluid(80, 32);
+        position: relative;
+
+        @include media(">=desktop") {
+            padding-top: $dft-spacing;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50vw;
+                height: 1px;
+                background-color: $c-white;
+            }
+        }
     }
 
     &--block{
