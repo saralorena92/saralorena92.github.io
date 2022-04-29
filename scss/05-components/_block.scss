@@ -1,8 +1,13 @@
 //blocks
 
 .section-block{
+    position: relative;
+    display: flex;
+    flex-direction: column;
     @include media(">=desktop") {
         scroll-snap-align: start;
+        height: 100vh;
+        display: block;
     }
 
     &__content, &__header{
@@ -10,7 +15,13 @@
 
         @include media(">=desktop") {
             padding: 0 10vw;
-            margin-top: rem(100px);
+        }
+    }
+
+    &__header{
+        @include media(">=desktop") {
+            padding-top: rem(100px);
+            padding-bottom: rem(100px);
         }
     }
 }

@@ -16,6 +16,10 @@ list-style-type: none;
         break-inside: avoid-column;
         margin-bottom: $dft-spacing;
         padding-bottom:$dft-spacing;
+
+        &>*{
+            padding-bottom: $dft-spacing-sm;
+        }
        
            
             &::after{

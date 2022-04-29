@@ -22,9 +22,13 @@
 }
 
 .slider__main {
+    order: 2;
+    @include media(">=desktop") {
+        order: 1;
+    }
     .slick-arrow {
-        top: auto;
-        bottom: calc(#{$dft-indicator-h} / 2);
+        top:calc(#{$dft-spacing-mobile} + (#{$dft-spacing} * 1.5));
+        bottom: 0;
         width: rem(64px);
         height: rem(28px);
         &::before {
@@ -32,6 +36,8 @@
         }
 
         @include media(">=desktop") {
+            top: auto;
+        bottom: calc(#{$dft-indicator-h} / 2);
             &.slick-prev {
                 left: 10vw;
             }
@@ -49,7 +55,7 @@
         }
     }
     &-wrapper{
-        height: 50vw;
+        height:$dft-spacing-mobile;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -73,7 +79,6 @@
         }
     }
     &-pic {
-        height: calc(100vh - #{$dft-header-h});
 
         .row {
             padding: 0;
@@ -94,7 +99,7 @@
 
     &-img{
         margin: 0;
-        height: 50vw;
+        height: $dft-spacing-mobile;
         width: 100%;
         overflow: hidden;
         @include media(">=desktop") {
@@ -104,6 +109,7 @@
 
     &-info {
         padding: $dft-spacing;
+        padding-top: rem(100px);
         @include media(">=desktop") {
             margin-top: rem(90px);
             padding: 0 $dft-spacing;
@@ -124,11 +130,19 @@
 
 .slider__indicator {
     cursor: pointer;
+    order: 1;
+    height: 0;
+    transform: translateY(calc(#{$dft-spacing-mobile} + #{$dft-spacing-sm}));
+    width: 70%;
+    margin: auto;
     @include media(">=desktop") {
+        height: auto;
+        order: 2;
         transform: translateY(-14vw);
         height: 0;
         width: 60vw;
         margin-left: auto;
+        margin-right: 0;
 
         .slick-track {
             overflow: hidden;
