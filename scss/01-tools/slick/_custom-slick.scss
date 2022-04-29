@@ -103,6 +103,7 @@
     }
 
     &-info {
+        padding: $dft-spacing;
         @include media(">=desktop") {
             margin-top: rem(90px);
             padding: 0 $dft-spacing;
@@ -123,7 +124,6 @@
 
 .slider__indicator {
     cursor: pointer;
-    
     @include media(">=desktop") {
         transform: translateY(-14vw);
         height: 0;

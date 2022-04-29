@@ -5,16 +5,19 @@
 body, html {
     height: 100%;
     width: 100%;
+    @include media(">=desktop") {
     overflow: hidden;
+    }
 }
 
 main {
     margin-top: $dft-header-h;
-    overflow-y: auto;
+    
+    @include media(">=desktop") {
+        overflow-y: auto;
   height: 100vh;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
-    @include media(">=desktop") {
         margin-top: 0;
         padding-left: $dft-header-h;
     }

@@ -1,8 +1,9 @@
 //blocks
 
 .section-block{
-    scroll-snap-align: start;
-    position: relative;
+    @include media(">=desktop") {
+        scroll-snap-align: start;
+    }
 
     &__content, &__header{
         padding: 0 $dft-spacing;
