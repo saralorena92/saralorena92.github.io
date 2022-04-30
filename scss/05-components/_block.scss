@@ -23,6 +23,10 @@
     }
 
     &__content {
+        width: 100%;
+        @include media(">=tablet") {
+            width: 80vw;
+        }
         @include media(">=desktop") {
             width: 60vw;
             padding-right: 0;

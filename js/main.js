@@ -18,7 +18,9 @@ $(document).ready(function () {
         arrows: true,
         dots: false,
         infinite: false,
-        asNavFor: '.slider__indicator'
+        asNavFor: '.slider__indicator',
+        adaptiveHeight: true
+
     });
     $('.slider__indicator').slick({
         slidesToShow: 4,

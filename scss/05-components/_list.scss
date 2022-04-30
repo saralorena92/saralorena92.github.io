@@ -1,45 +1,48 @@
 //list
 
-%list-base{
-padding-left: 0;
-list-style-type: none;
+%list-base {
+    padding-left: 0;
+    list-style-type: none;
 }
 
-.list{
+.list {
     @extend %list-base;
-    &--text{
+    &--text {
         @include media(">=desktop") {
-       column-count: 2;
+            -moz-column-count: 2;
+                 column-count: 2;
         }
-        li{
-        position: relative;
-        break-inside: avoid-column;
-        margin-bottom: $dft-spacing;
-        padding-bottom:$dft-spacing;
+        li {
+            position: relative;
+            -moz-column-break-inside: avoid;
+                 break-inside: avoid-column;
+            margin-bottom: $dft-spacing;
+            padding-bottom: $dft-spacing;
 
-        &>*{
-            padding-bottom: $dft-spacing-sm;
-        }
-       
-           
-            &::after{
-             content: "";
-             @extend .separator;
-             position: absolute;
-             bottom: 0;
-             left: 0;  
-             margin: 0; 
-           }
+            & > * {
+                padding-bottom: $dft-spacing-sm;
+            }
 
-        @include media(">=desktop") {
-            margin-bottom: rem(50px);
-            padding-bottom: rem(50px);
-            &:nth-of-type(even){
-                &::after{
-                    display: none;
+            &:not(:last-child) {
+                &::after {
+                    content: "";
+                    @extend .separator;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    margin: 0;
                 }
             }
-        }
+
+            @include media(">=desktop") {
+                margin-bottom: rem(50px);
+                padding-bottom: rem(50px);
+                &:nth-of-type(even) {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }

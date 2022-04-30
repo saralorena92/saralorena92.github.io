@@ -5,43 +5,56 @@
     color: $c-white;
 }
 
-%text-base{
-    font-family: $dft-family;
+%text-base {
+    font-family: $secondary-family;
     font-weight: $fw-light;
     color: $c-white;
 }
 
-.title{
+.title {
     @extend %title-base;
 
-    &--main{
+    &--main {
         @include font-fluid(80, 32);
         position: relative;
+        padding-top: $dft-spacing;
 
-        @include media(">=desktop") {
-            padding-top: $dft-spacing;
-            &::after{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $c-white;
+            @include media(">=tablet") {
+                width: 80%;
+            }
+            @include media(">=desktop") {
                 width: $dft-spacing-mobile;
-                height: 1px;
-                background-color: $c-white;
             }
         }
     }
 
-    &--block{
+    &--block {
         @include font-fluid(20, 14);
     }
 }
 
-.text{
+.text {
     @extend %text-base;
 
-    &--block{
-       @include font-fluid(16, 14);
-       @include font-height(32, 28);
+    &--block {
+        font-size: rem(14px);
+        line-height: rem(28px);
+        letter-spacing: 0.05em;
+    }
+
+    &--detail {
+        font-family: $dft-family;
+        opacity: 0.5;
+        @include font-fluid(16, 14);
+        @include font-height(32, 28);
+        font-weight: $fw-regular;
     }
 }
