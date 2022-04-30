@@ -55,6 +55,7 @@
         opacity: 0.5;
         @include font-fluid(16, 14);
         @include font-height(32, 28);
-        font-weight: $fw-regular;
+        font-weight: $fw-medium;
+        letter-spacing: 0.05em;
     }
 }

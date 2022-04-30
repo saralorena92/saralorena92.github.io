@@ -34,6 +34,9 @@
         &::before {
             font-size: rem(28px);
         }
+        @include media("<tablet", "landscape") {
+            top: 60vw;
+        }
         @include media(">=tablet") {
             top: calc(#{$dft-spacing-mobile} + (#{$dft-spacing} * 2.25));
         }
@@ -115,6 +118,9 @@
     &-info {
         padding: $dft-spacing;
         padding-top: rem(100px);
+        @include media("<tablet", "landscape") {
+            padding-top: 40vh;
+        }
         @include media(">=tablet") {
             padding-top: rem(180px);
         }

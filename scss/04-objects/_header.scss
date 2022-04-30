@@ -143,6 +143,10 @@
             display: flex;
             align-items: center;
             height: rem(80px);
+            @include media("<tablet", "landscape") {
+                font-size: rem(18px);
+                height: rem(45px);
+            }
             a {
                 color: $c-dark;
                 position: relative;
