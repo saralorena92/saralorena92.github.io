@@ -4,6 +4,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    @include media("<desktop") {
+        & + .section-block {
+            padding-top: rem(50px);
+        }
+    }
     @include media(">=desktop") {
         display: block;
     }
@@ -34,6 +39,7 @@
     }
 
     &__header {
+        padding-bottom: rem(50px);
         @include media(">=desktop") {
             padding-top: rem(100px);
             padding-bottom: rem(100px);
