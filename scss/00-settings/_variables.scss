@@ -1,7 +1,7 @@
 // colors
 $c-white: #ffffff;
 $c-black: #000000;
-$c-primary: #00EE99;
+$c-primary: #00ee99;
 $c-secondary: #ff9900;
 $c-error: #ff1e00;
 $c-dark: #1a1a1a;
@@ -10,25 +10,25 @@ $c-dark: #1a1a1a;
 $dft-transition: all 0.5s linear;
 
 //spaces
-$dft-spacing-xl:rem(50px);
+$dft-spacing-xl: rem(50px);
 $dft-spacing: rem(30px);
 $dft-spacing-sm: rem(16px);
 $dft-header-h: rem(74px);
 $dft-indicator-h: rem(200px);
-$dft-spacing-mobile:50vw;
+$dft-spacing-mobile: 50vw;
 
 //breakpoints
 $xs: 320;
 $md: 768;
 $lg: 1024;
-$xl: 1200;
+$xl: 1500;
 
 $breakpoints: (
-    "phone": $xs + "px",
-    "tablet": $md + "px",
-    "desktop": $lg + "px",
-    "widescreen": $xl + "px",
-) !default;
+    "phone": 320px,
+    "tablet": 768px,
+    "desktop": 1024px,
+    "widescreen": 1500px,
+);
 
 //other
 $dft-borderR: rem(20px);

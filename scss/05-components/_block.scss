@@ -1,16 +1,20 @@
 //blocks
 
-.section-block{
+.section-block {
     position: relative;
     display: flex;
     flex-direction: column;
     @include media(">=desktop") {
-        scroll-snap-align: start;
-        height: 100vh;
         display: block;
     }
 
-    &__content, &__header{
+    @include media(">=widescreen") {
+        scroll-snap-align: start;
+        height: 100vh;
+    }
+
+    &__content,
+    &__header {
         padding: 0 $dft-spacing;
 
         @include media(">=desktop") {
@@ -18,14 +22,14 @@
         }
     }
 
-    &__content{
+    &__content {
         @include media(">=desktop") {
             width: 60vw;
             padding-right: 0;
         }
     }
 
-    &__header{
+    &__header {
         @include media(">=desktop") {
             padding-top: rem(100px);
             padding-bottom: rem(100px);
