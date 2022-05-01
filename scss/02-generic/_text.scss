@@ -9,6 +9,7 @@
     font-family: $secondary-family;
     font-weight: $fw-light;
     color: $c-white;
+    letter-spacing: 0.05em;
 }
 
 .title {
@@ -38,24 +39,34 @@
 
     &--block {
         @include font-fluid(20, 14);
+        @include font-height(32, 28);
     }
 }
 
 .text {
     @extend %text-base;
 
+    &[href^="*"]{
+        &:hover{
+            color: $c-primary;
+        }
+    }
+
     &--block {
         font-size: rem(14px);
         line-height: rem(28px);
-        letter-spacing: 0.05em;
     }
 
     &--detail {
         font-family: $dft-family;
-        opacity: 0.5;
         @include font-fluid(16, 14);
         @include font-height(32, 28);
         font-weight: $fw-medium;
-        letter-spacing: 0.05em;
+    }
+
+    &--xl{
+        @include font-fluid(20, 18);
+        @include font-height(32, 28);
+        font-weight: $fw-medium;
     }
 }
