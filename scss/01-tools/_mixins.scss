@@ -36,10 +36,10 @@ $map-grid-props: (
     }
 }
 
-@mixin font-fluid($max-size, $min-size){
-    font-size: calc(#{$min-size}px + (#{$max-size} - #{$min-size}) * ((100vw - 768px) / (1920 - 768)));
+@mixin font-fluid($max-size, $min-size) {
+    font-size: calc(#{$min-size}px + (#{$max-size} - #{$min-size}) * ((100vw - 300px) / (1600 - 300)));
     //calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
-@mixin font-height($max-height, $min-height){
-    line-height: calc(#{$min-height}px + (#{$max-height} - #{$min-height}) * ((100vw - 768px) / (1920 - 768)));
+@mixin font-height($max-height, $min-height) {
+    line-height: calc(#{$min-height}px + (#{$max-height} - #{$min-height}) * ((100vw - 300px) / (1600 - 300)));
 }
