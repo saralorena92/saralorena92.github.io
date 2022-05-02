@@ -3,15 +3,15 @@
     color: $c-error !important;
 }
 
-.text-uppercase{
+.text-uppercase {
     text-transform: uppercase;
 }
 
-.opacity-50{
-    opacity: .5;
+.opacity-50 {
+    opacity: 0.5;
 }
 
-.no-decoration{
+.no-decoration {
     text-decoration: none;
 }
 .sr-only {
@@ -24,5 +24,6 @@
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
-
-
+.flex-row {
+    flex-direction: row;
+}

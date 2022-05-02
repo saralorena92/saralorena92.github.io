@@ -18,6 +18,9 @@
 
     & > .col {
         flex: 1 1 auto;
+    }
+
+    & > div[class*="col-"] {
         padding-left: $dft-spacing-sm;
         padding-right: $dft-spacing-sm;
     }

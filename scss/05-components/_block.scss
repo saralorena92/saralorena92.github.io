@@ -4,6 +4,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+
     @include media("<desktop") {
         & + .section-block {
             padding-top: rem(50px);
@@ -11,11 +12,13 @@
     }
     @include media(">=desktop") {
         display: block;
+        min-height: 100vh;
     }
 
     @include media(">=widescreen") {
         scroll-snap-align: start;
         height: 100vh;
+        min-height: inherit;
     }
 
     &__content,

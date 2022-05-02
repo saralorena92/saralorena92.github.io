@@ -46,15 +46,9 @@
 .text {
     @extend %text-base;
 
-    &[href^="*"]{
-        &:hover{
-            color: $c-primary;
-        }
-    }
-
     &--block {
-        font-size: rem(14px);
-        line-height: rem(28px);
+        @include font-fluid(15, 14);
+        @include font-height(30, 28);
     }
 
     &--detail {
@@ -64,9 +58,21 @@
         font-weight: $fw-medium;
     }
 
-    &--xl{
-        @include font-fluid(20, 18);
-        @include font-height(32, 28);
+    &--icon {
+        @include font-fluid(46, 32);
+    }
+
+    &--xl {
+        @include font-fluid(20, 14);
+        @include font-height(32, 18);
         font-weight: $fw-medium;
+    }
+}
+
+a {
+    &:hover {
+        &.text {
+            color: $c-primary;
+        }
     }
 }
