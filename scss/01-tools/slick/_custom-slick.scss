@@ -111,8 +111,20 @@
         height: $dft-spacing-mobile;
         width: 100%;
         overflow: hidden;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: $z-up;
+            inset: 0;
+            box-shadow: inset 0px rem(-15px) rem(20px) rem(-6px) rgba(0, 0, 0, 70%);
+        }
         @include media(">=desktop") {
             height: 100vh;
+            &::after {
+                box-shadow: inset rem(-15px) 0px rem(20px) rem(-6px) rgba(0, 0, 0, 70%);
+            }
         }
     }
 

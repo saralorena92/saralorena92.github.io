@@ -23,6 +23,7 @@
     & > div[class*="col-"] {
         padding-left: $dft-spacing-sm;
         padding-right: $dft-spacing-sm;
+        position: relative;
     }
     @each $modifier, $breakpoint in $map-grid-props {
         @include create-col-classes($modifier, $grid__cols, $breakpoint);
